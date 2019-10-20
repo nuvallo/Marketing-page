@@ -15,18 +15,23 @@ body {
     background: @main-overlay;
     z-index: 1;
     opacity: 0.85;
+
 }
 
 .header-content {
     position: relative;
     top: 250px;
-    left: 0;
+    // left: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     z-index: 2;
+
+    @media @mobile {
+        top: 150px;
+    }
 
     h1 {
         font-family: 'Lato', sans-serif;
@@ -57,9 +62,21 @@ body {
         background: @secondary;
         color: @basic;
         border: 1px solid @primary;
-
     }
-   }
+
+    @media @mobile {
+
+        p {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 1.5rem;
+            color: @basic;
+            width: 400px;
+            text-align: center;
+            // border: 1px solid red;
+        }
+    }// Mobile Media
+   }// Header-Contet
 
    .fullscreen-video-wrap {
     position: absolute;
@@ -68,11 +85,28 @@ body {
     width: 100%;
     height: 100%;
 
+    .image-background {
+        @media @mobile {
+            position: relative;
+            left: -550px;
+        }
+    }
+
+
     video {
         min-width: 100%;
         min-height: 100%;
-        object-fit: cover;
+        // object-fit: cover;
 
     }
+
+    @media @mobile {
+        video {
+            display: none;
+            
+        } 
+    }
+
+
 }
 
