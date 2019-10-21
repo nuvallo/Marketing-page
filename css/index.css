@@ -59,17 +59,28 @@ body {
   width: 100%;
   overflow: hidden;
 }
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
 .header-overlay {
   height: 100vh;
   width: 100vw;
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
   background: #4736E2;
   z-index: 1;
   opacity: 0.85;
+}
+@media screen and (max-width: 500px) {
+  .header-overlay {
+    height: 100%;
+    width: 100%;
+  }
 }
 .header-content {
   position: relative;
@@ -80,9 +91,9 @@ body {
   align-items: center;
   z-index: 2;
 }
-@media (max-width: 760px) {
+@media screen and (max-width: 500px) {
   .header-content {
-    top: 150px;
+    margin-top: 5%;
   }
 }
 .header-content h1 {
@@ -112,13 +123,12 @@ body {
   color: #FEF4EC;
   border: 1px solid #EE882F;
 }
-@media (max-width: 760px) {
+@media screen and (max-width: 500px) {
   .header-content p {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 1.5rem;
     color: #FEF4EC;
-    width: 400px;
     text-align: center;
   }
 }
@@ -129,17 +139,18 @@ body {
   width: 100%;
   height: 100%;
 }
-@media (max-width: 760px) {
-  .fullscreen-video-wrap .image-background {
-    position: relative;
-    left: -550px;
+@media screen and (max-width: 500px) {
+  .fullscreen-video-wrap .image-background .img {
+    height: 100%;
+    width: 100%;
   }
 }
 .fullscreen-video-wrap video {
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-@media (max-width: 760px) {
+@media screen and (max-width: 500px) {
   .fullscreen-video-wrap video {
     display: none;
   }
