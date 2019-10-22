@@ -75,18 +75,16 @@ body {
     width: 100%;
     height: 100%;
 
-    #image-background {
-
         @media @mobile {
-            #image-background {
-                background-image: url('../assets/mobile_bg1.jpeg');
+
+            main.fullscreen-video-wrap {
+                background-image: url('../assets/mobile_bg2.jpeg');
+                background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
-                background-repeat: no-repeat;
                 height: 100vh;
             }
         }
-    }
 
     video {
         width: 100%;
@@ -97,7 +95,9 @@ body {
 
     @media @mobile {
         video {
-            display: none;
+            // display: none;
         } 
+
+
     }// Mobile Media
 }// Fullscreen Video Wrap
